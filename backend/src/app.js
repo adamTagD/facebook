@@ -1,19 +1,22 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const authRoutes = require('./routes/authRoutes');
+const authRoutes = require('./routes/auth');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 const cors = require('cors');
+
+dotenv.config();
 
 const app = express();
 
 // Middleware
-app.use(cors());
-app.use(bodyParser.json());
+app.use(cors()); 
+app.use(bodyParser.json()); 
 
-// Database connection
-mongoose.connect('mongodb://localhost:27017/myfullstackapp', {
+// db connection
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true, 
 })
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
