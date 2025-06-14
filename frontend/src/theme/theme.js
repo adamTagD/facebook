@@ -2,46 +2,61 @@ import { createTheme } from '@mui/material/styles';
 
 // Define your brand colors
 const palette = {
+  mode: 'dark', // Crucial: Set the mode to 'dark' for MUI's internal dark theme handling
   primary: {
-    main: '#1976d2', // Blue
-    light: '#42a5f5',
-    dark: '#1565c0',
+    main: '#2374E1', // A prominent, slightly muted Facebook blue for primary actions
+    light: '#428CD4',
+    dark: '#1A5DAF',
     contrastText: '#fff',
   },
   secondary: {
-    main: '#9c27b0', // Purple
-    light: '#ba68c8',
-    dark: '#7b1fa2',
-    contrastText: '#fff',
+    main: '#8A8D91', // A subdued grey, common for secondary actions or less emphasized elements
+    light: '#A0A3A6',
+    dark: '#6A6D70',
+    contrastText: '#fff', // Or a very light grey if you want more contrast
   },
   error: {
-    main: '#d32f2f',
-    light: '#ef5350',
-    dark: '#c62828',
+    main: '#F02849', // Facebook's typical red for errors/warnings
+    light: '#F3526D',
+    dark: '#C8213D',
+    contrastText: '#fff',
   },
   warning: {
-    main: '#ed6c02',
-    light: '#ff9800',
-    dark: '#e65100',
+    main: '#F7B538', // A more yellow/orange for warnings
+    light: '#F9C967',
+    dark: '#C5912C',
+    contrastText: '#000', // Black or very dark grey for contrast on bright warning
   },
   info: {
-    main: '#0288d1',
-    light: '#03a9f4',
-    dark: '#01579b',
+    main: '#2D88FF', // A brighter blue for info messages, similar to Facebook's link color
+    light: '#5AA0FF',
+    dark: '#216ACF',
+    contrastText: '#fff',
   },
   success: {
-    main: '#2e7d32',
-    light: '#4caf50',
-    dark: '#1b5e20',
+    main: '#31A24C', // Facebook's green for success
+    light: '#5DBE70',
+    dark: '#227236',
+    contrastText: '#fff',
   },
   background: {
-    default: '#fafafa',
-    paper: '#ffffff',
+    default: '#18191A', // The darkest background color, Facebook's main dark background
+    paper: '#242526', // Slightly lighter for cards, modals, and elevated surfaces
   },
   text: {
-    primary: 'rgba(0, 0, 0, 0.87)',
-    secondary: 'rgba(0, 0, 0, 0.6)',
+    primary: '#E4E6EB', // Light grey for primary text
+    secondary: '#B0B3B8', // Slightly darker grey for secondary text
+    disabled: '#8A8D91', // Even darker for disabled text
   },
+  action: {
+    active: '#B0B3B8', // For icons or interactive elements in their active state
+    hover: 'rgba(255, 255, 255, 0.08)', // Light hover effect
+    selected: 'rgba(255, 255, 255, 0.16)', // Selected state
+    disabled: 'rgba(255, 255, 255, 0.3)',
+    disabledBackground: 'rgba(255, 255, 255, 0.12)',
+    focus: 'rgba(255, 255, 255, 0.12)',
+  },
+  divider: 'rgba(255, 255, 255, 0.1)', // A subtle divider color
 };
 
 // Create theme

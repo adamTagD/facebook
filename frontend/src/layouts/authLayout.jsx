@@ -2,7 +2,7 @@ import { Box, Card, CardContent, Container } from "@mui/material";
 
 export default function AuthLayout({children}) {
   return (
-    <Container component="main" maxWidth="sm">
+    <Container component="main" maxWidth="sm" className="authContainer">
       <Box
         sx={{
           minHeight: "100vh",

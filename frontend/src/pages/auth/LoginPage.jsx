@@ -22,7 +22,8 @@ import {
   Login as LoginIcon,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import AuthLayout from "../layouts/authLayout";
+import AuthLayout from "../../layouts/authLayout";
+import "./authstyles.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -155,10 +156,10 @@ const LoginPage = () => {
           <LoginIcon sx={{ color: "white", fontSize: 28 }} />
         </Box>
         <Typography component="h1" variant="h4" fontWeight="bold" gutterBottom>
-          Welcome Back
+          أهلا مجددا
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Sign in to your account to continue
+          سجل الدخول لاستخدام الموقع
         </Typography>
       </Box>
 
@@ -181,7 +182,7 @@ const LoginPage = () => {
           required
           fullWidth
           id="email"
-          label="Email Address"
+          label="الإيميل"
           name="email"
           autoComplete="email"
           autoFocus
@@ -189,13 +190,6 @@ const LoginPage = () => {
           onChange={handleChange}
           error={!!errors.email}
           helperText={errors.email}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <Email color="action" />
-              </InputAdornment>
-            ),
-          }}
           sx={{ mb: 2 }}
         />
 
@@ -204,7 +198,7 @@ const LoginPage = () => {
           required
           fullWidth
           name="password"
-          label="Password"
+          label="كلمة السر"
           type={showPassword ? "text" : "password"}
           id="password"
           autoComplete="current-password"
@@ -212,24 +206,6 @@ const LoginPage = () => {
           onChange={handleChange}
           error={!!errors.password}
           helperText={errors.password}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <Lock color="action" />
-              </InputAdornment>
-            ),
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleTogglePassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
           sx={{ mb: 3 }}
         />
 
@@ -251,13 +227,13 @@ const LoginPage = () => {
 
         <Divider sx={{ my: 2 }}>
           <Typography variant="body2" color="text.secondary">
-            OR
+            أو
           </Typography>
         </Divider>
 
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="body2" color="text.secondary">
-            Don't have an account?{" "}
+            ليس لديك حساب؟
             <Link
               component="button"
               variant="body2"
@@ -270,7 +246,7 @@ const LoginPage = () => {
                 },
               }}
             >
-              Sign up here
+              إنشاء حساب
             </Link>
           </Typography>
         </Box>

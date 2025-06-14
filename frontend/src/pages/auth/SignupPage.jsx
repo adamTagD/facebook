@@ -22,7 +22,7 @@ import {
   PersonAdd,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import AuthLayout from "../layouts/authLayout";
+import AuthLayout from "../../layouts/authLayout";
 
 const SignupPage = () => {
   const navigate = useNavigate();
