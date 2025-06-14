@@ -222,7 +222,7 @@ const LoginPage = () => {
           }}
           disabled={loading}
         >
-          {loading ? <CircularProgress size={24} color="inherit" /> : "Sign In"}
+          {loading ? <CircularProgress size={24} color="inherit" /> : "تسجيل دخول"}
         </Button>
 
         <Divider sx={{ my: 2 }}>
